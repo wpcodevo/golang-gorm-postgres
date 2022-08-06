@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - 6500:5432
+    env_file:
+      - ./app.env
+    volumes:
+      - postgres:/var/lib/postgresql/data
+volumes:
+  postgres:
