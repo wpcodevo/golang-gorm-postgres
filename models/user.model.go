@@ -7,16 +7,16 @@ import (
 )
 
 type User struct {
-	ID        uuid.UUID `json:"id" gorm:"type:uuid;default:uuid_generate_v4();primary_key"`
-	Name      string    `json:"name" gorm:"type:varchar(255)" binding:"required"`
-	Email     string    `json:"email" gorm:"uniqueIndex" binding:"required"`
-	Password  string    `json:"password" binding:"required,min=8"`
-	Role      string    `json:"role" gorm:"type:varchar(255)"`
-	Provider  string    `json:"provider"`
-	Photo     string    `json:"photo" binding:"required"`
-	Verified  bool      `json:"verified"`
-	CreatedAt time.Time `json:"created_at"`
-	UpdatedAt time.Time `json:"updated_at"`
+	ID        uuid.UUID `gorm:"type:uuid;default:uuid_generate_v4();primary_key"`
+	Name      string    `gorm:"type:varchar(255)"`
+	Email     string    `gorm:"uniqueIndex"`
+	Password  string
+	Role      string `gorm:"type:varchar(255)"`
+	Provider  string
+	Photo     string
+	Verified  bool
+	CreatedAt time.Time
+	UpdatedAt time.Time
 }
 
 func (User) UsersTable() string {
