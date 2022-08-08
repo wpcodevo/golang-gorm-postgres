@@ -19,10 +19,6 @@ type User struct {
 	UpdatedAt time.Time `gorm:"not null"`
 }
 
-func (User) UsersTable() string {
-	return "users"
-}
-
 type SignUpInput struct {
 	Name            string `json:"name" binding:"required"`
 	Email           string `json:"email" binding:"required"`
