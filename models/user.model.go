@@ -5,9 +5,9 @@ import (
 )
 
 type User struct {
-	ID    uuid.UUID `json:"id" gorm:"type:uuid;default:uuid_generate_v4();primary_key"`
-	Name  string    `json:"name" gorm:"type:varchar(255)" binding:"required"`
-	Email string    `json:"email" gorm:"uniqueIndex" binding:"required"`
+	ID    uuid.UUID `gorm:"type:uuid;default:uuid_generate_v4();primary_key"`
+	Name  string    `gorm:"type:varchar(255)"`
+	Email string    `gorm:"uniqueIndex"`
 }
 
 func (User) UsersTable() string {
