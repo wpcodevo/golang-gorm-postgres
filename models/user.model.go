@@ -9,3 +9,7 @@ type User struct {
 	Name  string    `json:"name" gorm:"type:varchar(255)" binding:"required"`
 	Email string    `json:"email" gorm:"uniqueIndex" binding:"required"`
 }
+
+func (User) UsersTable() string {
+	return "users"
+}
