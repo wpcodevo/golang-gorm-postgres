@@ -13,25 +13,25 @@ import (
 
 func DeserializeUser() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
-		var access_token string
-		cookie, err := ctx.Cookie("access_token")
+		var token string
+		cookie, err := ctx.Cookie("token")
 
 		authorizationHeader := ctx.Request.Header.Get("Authorization")
 		fields := strings.Fields(authorizationHeader)
 
 		if len(fields) != 0 && fields[0] == "Bearer" {
-			access_token = fields[1]
+			token = fields[1]
 		} else if err == nil {
-			access_token = cookie
+			token = cookie
 		}
 
-		if access_token == "" {
+		if token == "" {
 			ctx.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"status": "fail", "message": "You are not logged in"})
 			return
 		}
 
 		config, _ := initializers.LoadConfig(".")
-		sub, err := utils.ValidateToken(access_token, config.AccessTokenPublicKey)
+		sub, err := utils.ValidateToken(token, config.TokenSecret)
 		if err != nil {
 			ctx.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"status": "fail", "message": err.Error()})
 			return
