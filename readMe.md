@@ -3,3 +3,11 @@
 ### 1. How to Setup Golang GORM RESTful API Project with Postgres
 
 [How to Setup Golang GORM RESTful API Project with Postgres](https://codevoweb.com/setup-golang-gorm-restful-api-project-with-postgres/)
+
+### 2. API with Golang + GORM + PostgreSQL: Access & Refresh Tokens
+
+[API with Golang + GORM + PostgreSQL: Access & Refresh Tokens](https://codevoweb.com/golang-gorm-postgresql-user-registration-with-refresh-tokens)
+
+### 3. Golang and GORM - User Registration and Email Verification
+
+[Golang and GORM - User Registration and Email Verification](https://codevoweb.com/golang-and-gorm-user-registration-email-verification)
