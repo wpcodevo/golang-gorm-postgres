@@ -21,7 +21,7 @@ func NewAuthController(DB *gorm.DB) AuthController {
 	return AuthController{DB}
 }
 
-// SignUp User
+// [...] SignUp User
 func (ac *AuthController) SignUpUser(ctx *gin.Context) {
 	var payload *models.SignUpInput
 
@@ -91,6 +91,7 @@ func (ac *AuthController) SignUpUser(ctx *gin.Context) {
 	ctx.JSON(http.StatusCreated, gin.H{"status": "success", "message": message})
 }
 
+// [...] SignIn User
 func (ac *AuthController) SignInUser(ctx *gin.Context) {
 	var payload *models.SignInInput
 
@@ -103,6 +104,11 @@ func (ac *AuthController) SignInUser(ctx *gin.Context) {
 	result := ac.DB.First(&user, "email = ?", strings.ToLower(payload.Email))
 	if result.Error != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"status": "fail", "message": "Invalid email or Password"})
+		return
+	}
+
+	if !user.Verified {
+		ctx.JSON(http.StatusForbidden, gin.H{"status": "fail", "message": "Please verify your email"})
 		return
 	}
 
@@ -125,11 +131,13 @@ func (ac *AuthController) SignInUser(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{"status": "success", "token": token})
 }
 
+// [...] SignOut User
 func (ac *AuthController) LogoutUser(ctx *gin.Context) {
 	ctx.SetCookie("token", "", -1, "/", "localhost", false, true)
 	ctx.JSON(http.StatusOK, gin.H{"status": "success"})
 }
 
+// [...] Verify Email
 func (ac *AuthController) VerifyEmail(ctx *gin.Context) {
 
 	code := ctx.Params.ByName("verificationCode")
