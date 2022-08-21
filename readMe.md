@@ -11,3 +11,7 @@
 ### 3. Golang and GORM - User Registration and Email Verification
 
 [Golang and GORM - User Registration and Email Verification](https://codevoweb.com/golang-and-gorm-user-registration-email-verification)
+
+### 4. Forgot/Reset Passwords in Golang with SMTP HTML Email
+
+[Forgot/Reset Passwords in Golang with SMTP HTML Email](https://codevoweb.com/forgot-reset-passwords-in-golang-with-html-email)
