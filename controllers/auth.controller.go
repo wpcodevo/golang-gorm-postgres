@@ -235,9 +235,9 @@ func (ac *AuthController) ResetPassword(ctx *gin.Context) {
 	passwordResetToken := utils.Encode(resetToken)
 
 	var updatedUser models.User
-	result := ac.DB.First(&updatedUser, "password_reset_token = ?", passwordResetToken)
+	result := ac.DB.First(&updatedUser, "password_reset_token = ? AND password_reset_at > ?", passwordResetToken, time.Now())
 	if result.Error != nil {
-		ctx.JSON(http.StatusBadRequest, gin.H{"status": "fail", "message": "Invalid verification code or user doesn't exists"})
+		ctx.JSON(http.StatusBadRequest, gin.H{"status": "fail", "message": "The reset token is invalid or has expired"})
 		return
 	}
 
@@ -245,9 +245,7 @@ func (ac *AuthController) ResetPassword(ctx *gin.Context) {
 	updatedUser.PasswordResetToken = ""
 	ac.DB.Save(&updatedUser)
 
-	ctx.SetCookie("access_token", "", -1, "/", "localhost", false, true)
-	ctx.SetCookie("refresh_token", "", -1, "/", "localhost", false, true)
-	ctx.SetCookie("logged_in", "", -1, "/", "localhost", false, true)
+	ctx.SetCookie("token", "", -1, "/", "localhost", false, true)
 
 	ctx.JSON(http.StatusOK, gin.H{"status": "success", "message": "Password data updated successfully"})
 }
