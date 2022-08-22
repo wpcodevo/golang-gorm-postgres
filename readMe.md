@@ -15,3 +15,7 @@
 ### 4. Forgot/Reset Passwords in Golang with SMTP HTML Email
 
 [Forgot/Reset Passwords in Golang with SMTP HTML Email](https://codevoweb.com/forgot-reset-passwords-in-golang-with-html-email)
+
+### 5. Build a RESTful CRUD API with Golang
+
+[Build a RESTful CRUD API with Golang](https://codevoweb.com/build-restful-crud-api-with-golang)
