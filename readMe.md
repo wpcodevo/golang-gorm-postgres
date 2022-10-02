@@ -1,8 +1,8 @@
 # Forgot/Reset Passwords in Golang with SMTP HTML Email
 
-![Forgot/Reset Passwords in Golang with SMTP HTML Email](https://codevoweb.com/wp-content/uploads/2022/08/Forgot-Reset-Passwords-in-Golang-with-SMTP-HTML-Email.webp)
-
 This article will teach you how to add a secure forgot/reset password feature to a Golang RESTful API application. We will generate the HTML Email templates with the standard Golang template package and send them via SMTP with the Gomail package.
+
+![Forgot/Reset Passwords in Golang with SMTP HTML Email](https://codevoweb.com/wp-content/uploads/2022/08/Forgot-Reset-Passwords-in-Golang-with-SMTP-HTML-Email.webp)
 
 ## Topics Covered
 
