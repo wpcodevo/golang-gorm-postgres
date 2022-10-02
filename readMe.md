@@ -1,4 +1,37 @@
-# Build Golang RESTful API with Gorm, Gin and Postgres
+# Build a RESTful CRUD API with Golang
+
+![Build a RESTful CRUD API with Golang](https://codevoweb.com/wp-content/uploads/2022/08/Build-a-RESTful-CRUD-API-with-Golang.webp)
+
+This article will teach you how to create a CRUD RESTful API in a Golang environment that runs on a Gin Gonic server and uses a PostgreSQL database. We’ll also discuss how you can build models, connect to the running SQL database server, and run database migrations with the GORM library.
+
+## Topics Covered
+
+- What is a REST API
+- What is a REST API
+- What is GORM
+- What is Gin Gonic
+- Create the Database Models with GORM
+- Generating the SQL Table with GORM
+- Creating CRUD Functions in a RESTful API
+    - Create a Constructor for the CRUD Operations
+    - Create Operation Route Handler
+    - Update Operation Route Handler
+    - Retrieve a Single Record Route Handler
+    - Retrieve All Records Route Handler
+    - Delete Operation Route Handler
+- Creating Routes for the CRUD Operations
+- Update/Configure the Golang API Server
+- Testing the Golang CRUD API with Postman
+    - Log into the API
+    - Creating a New Record
+    - Updating the Record
+    - Request a Single Record
+    - Retrieve all Records with Paginated Results
+    - Delete a Record
+
+Read the entire article here: [https://codevoweb.com/build-restful-crud-api-with-golang](https://codevoweb.com/build-restful-crud-api-with-golang)
+
+Articles in this series:
 
 ### 1. How to Setup Golang GORM RESTful API Project with Postgres
 
