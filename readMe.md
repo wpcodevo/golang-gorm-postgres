@@ -1,8 +1,8 @@
 # Build a RESTful CRUD API with Golang
 
-![Build a RESTful CRUD API with Golang](https://codevoweb.com/wp-content/uploads/2022/08/Build-a-RESTful-CRUD-API-with-Golang.webp)
-
 This article will teach you how to create a CRUD RESTful API in a Golang environment that runs on a Gin Gonic server and uses a PostgreSQL database. We’ll also discuss how you can build models, connect to the running SQL database server, and run database migrations with the GORM library.
+
+![Build a RESTful CRUD API with Golang](https://codevoweb.com/wp-content/uploads/2022/08/Build-a-RESTful-CRUD-API-with-Golang.webp)
 
 ## Topics Covered
 
