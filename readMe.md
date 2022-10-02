@@ -1,8 +1,8 @@
 # How to Setup Golang GORM RESTful API Project with Postgres
 
-![How to Setup Golang GORM RESTful API Project with Postgres](https://codevoweb.com/wp-content/uploads/2022/08/How-to-Setup-Golang-GORM-RESTful-API-Project-with-Postgres.webp)
-
 This article will guide you on how you can set up a Golang project with the GORM library and PostgreSQL to build CRUD RESTful API to perform the basic Create/Get/Update/Delete operations
+
+![How to Setup Golang GORM RESTful API Project with Postgres](https://codevoweb.com/wp-content/uploads/2022/08/How-to-Setup-Golang-GORM-RESTful-API-Project-with-Postgres.webp)
 
 ## Topics Covered
 
