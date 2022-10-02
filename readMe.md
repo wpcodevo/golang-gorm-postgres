@@ -1,8 +1,8 @@
 # Golang and GORM - User Registration and Email Verification
 
-![Golang and GORM - User Registration and Email Verification](https://codevoweb.com/wp-content/uploads/2022/08/Golang-and-GORM-User-Registration-and-Email-Verification.webp)
-
 In this comprehensive guide, you will learn how to secure a Golang RESTful API with JSON Web Tokens and Email verification. We will start by registering the user, verifying the user's email address, logging in the registered user, and logging out the authenticated user.
+
+![Golang and GORM - User Registration and Email Verification](https://codevoweb.com/wp-content/uploads/2022/08/Golang-and-GORM-User-Registration-and-Email-Verification.webp)
 
 ## Topics Covered
 
